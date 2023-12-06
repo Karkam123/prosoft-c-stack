@@ -1,11 +1,34 @@
 #include "cstack.h"
 #include <stddef.h>
+#include <stdio.h>
 
 #define UNUSED(VAR) (void)(VAR)
 
+struct node
+{
+    const struct node*prev;
+    unsigned int size;
+    void* data;
+};
+
+
+
+struct node* stack[10] = {NULL};
+
+
 hstack_t stack_new(void)
 {
-    return -1;
+    int i;
+    for (i=0;i<=10;++i)
+    {
+        if (stack[i]==NULL)
+        {
+
+
+        }
+    }
+
+    return 1;
 }
 
 void stack_free(const hstack_t hstack)
